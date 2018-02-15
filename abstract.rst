@@ -14,11 +14,15 @@ The Short Description
 *The brief description which will appear in the online program and give
 attendees a basic sense of your talk. This should be around 100 words or less.*
 
-In this talk I will describe a pilot project at the University of California,
-Davis to redesign and teach an upper level mechanical vibrations engineering
-course where students learn engineering concepts via computational thinking and
-computational experimentation as opposed to the analtyical mathematic methods
-used for the past century.
+I will describe a pilot project at the University of California, Davis on the
+redesign of an upper level mechanical vibrations engineering course where
+students now learn the relevant concepts via computational thinking and
+computational experimentation. We utilize interactive computing with the
+Jupyter platform and a custom Python library instead of focusing on the
+analytical mathematical methods used over the past century. I will cover the
+course design, principles of teaching and learning with computational thinking
+(focusing on API design and the use of symbolics), software/hardware
+infrastructure, assessment practices, and lessons learned.
 
 The Long Description
 ====================
@@ -32,16 +36,60 @@ background/motivation, methods, results, and conclusion structure is encouraged
 but not required. Links to project websites, source code repositories, figures,
 full papers, and evidence of public speaking ability are encouraged.*
 
-Software
---------
+The topic of "mechanical vibrations" has a long history in mechanical
+engineering curricula, codified almost 100 years ago with J. P. Den Hartog's
+seminal text on the subject. Mechanical vibrations has typically been taught
+with most of the focus on reasoning via the analytic study of linear ordinary
+differential equations that arise from Newton's Laws of Motion. And for the
+last 30 years, computation has more often than not complemented the analytics
+usually as addenda in a variety of textbooks.
 
-A custom Python library called "resonance" was developed for the course. This
-library provides students with various mechanical systems in which they can
-simulate to learn about various vibration concepts. We designed the software
-with these goals in imind: 1) students should be able to experiment with
-simualted systems in much the same way you might experiement with real systems,
-2) the fine details of programming in Python should be hidden up front but be
-able to be exposed through a scaffolded approach, 3) students should only have
-to know basic programming concepts with writing functions as the primary means
-to interact with the software, i.e. students should not have to create classes
-but can still use and modify objects.
+We decided to implement a number of changes focused around computational
+thinking being the primary conceptual reasoning tool in the course. We
+hypothesize this improves learning and provides modern practical skills to the
+students. The primary goals were to:
+
+- motivate the learning via real vibration problems,
+- increase the amount of exposure to vibration design,
+- increase the likelihood that students will put computation on equal footing
+  as other common engineering problem solving tools when finished with at
+  Bachelor's degree, and
+- remove the need for students to purchase a costly printed oversized
+  traditional textbook.
+
+To meet these goals, we made these changes to the course:
+
+- Ordered the material delivery such that students first learn to analyze data
+  from real systems, then learn to model and simulate those systems, and close
+  with students learning design by example.
+- De-emphasis and removal of the analytic study of ordinary differential
+  equations and replacement with both data analysis and simulation based
+  methods for learning vibrational concepts.
+- Replace most in-class "board lecturing" with active computational exercises.
+- Development of tightly scoped, open access, interactive text that accompanies
+  the course using Jupyter notebooks.
+- Development of a Python software package designed specifically for ease of
+  learning vibrational concepts that assumes no prior Python knowledge and
+  scaffolds the exposure to new computation methods as the course progresses.
+- Removal of exams and the introduction of open ended problems in weekly
+  homeworks and a comprehensive course project.
+
+I will cover each of these and show how Python is essential in executing the
+changes. The introduced methods will be presented in a general context so that
+other educators can make use of them in other STEM domains. Finally, I will
+close with reflections on what the next steps are in course and curricula
+design.
+
+Relevant Links
+--------------
+
+- Course Website: https://moorepants.github.io/eng122
+- Resonance Book Draft: https://moorepants.github.io/resonance
+- Resonance Software and Book Source: https://github.com/moorepants/resonance
+
+Evidence of Public Speaking
+---------------------------
+
+I have given 30+ talks at a variety of academic conferences, given talks and
+tutorials and prior SciPy and PyCon conferences, and teach six courses to 200+
+students each year in my day job.
